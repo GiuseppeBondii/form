@@ -1,6 +1,5 @@
 # FormalLogic Quest 🔍🚀
 
-[![MIT License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
 [![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-181717.svg)](https://pages.github.com)
 [![React Version](https://img.shields.io/badge/React-19-61DAFB.svg)](https://react.dev/)
 
@@ -67,10 +66,6 @@ Congratulations! You've completed the quiz! 🎉
 - **Styling**: CSS Modules + Custom Properties
 - **Hosting**: GitHub Pages
 - **CI/CD**: GitHub Actions
-
-## 📄 License
-
-Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 ## ⚠️ Important Notes
 
