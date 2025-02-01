@@ -1,4 +1,4 @@
-Qual è la capitale della Francia? :->: Parigi
-Quanto fa 2+2? :->: 4
-Chi ha scritto la Divina Commedia? :->: Dante Alighieri
-Congratulazioni! Hai completato tutto il questionario!
+Qual è la radice quadrata di 64? :->: 8
+Quanti continenti ci sono? :->: 7
+Chi ha dipinto la Gioconda? :->: Leonardo da Vinci
+Complimenti! Hai completato tutte le domande!
