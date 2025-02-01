@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+Ecco il README riscritto in modo strutturato e professionale:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# FormalLogic Quest 🔍🚀
 
-## Available Scripts
+[![MIT License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
+[![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-181717.svg)](https://pages.github.com)
+[![React Version](https://img.shields.io/badge/React-19-61DAFB.svg)](https://react.dev/)
 
-In the project directory, you can run:
 
-### `npm start`
+**Live Demo:**  
+https://giuseppebondii.github.io/form/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **📁 GitHub-Powered** - Directly read quizzes from any public GitHub repository
+- **⏳ Progress Persistence** - Local storage saves user's progress automatically
+- **🎮 Interactive Flow** - Conditional question branching based on answers
+- **📱 Fully Responsive** - Optimized for all screen sizes
+- **🔐 Zero Backend** - 100% client-side with GitHub as content CMS
+- **⚡ Instant Setup** - Deploy to GitHub Pages in minutes
 
-### `npm test`
+## 🚀 Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### For Content Creators
+1. Create a `.txt` file in your GitHub repo with this format:
+   ```txt
+   Question 1 :->: answer1
+   Question 2 :->: answer2
+   Final congratulatory message (optional)
+   ```
+2. Build your quiz URL:
+   ```
+   https://giuseppebondii.github.io/form/#/form/<owner>/<repo>/<branch>/<path-to-file>
+   ```
+3. Share the link with your audience!
 
-### `npm run build`
+### For Developers
+```bash
+# Clone repository
+git clone https://github.com/GiuseppeBondii/form.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Install dependencies
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Start development server
+npm run dev
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Build for production
+npm run build
 
-### `npm run eject`
+# Deploy to GitHub Pages
+npm run deploy
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🧩 Quiz File Format
+Example (`sample-quiz.txt`):
+```txt
+What is the capital of France? :->: Paris
+Solve: 2 + 2 = ? :->: 4
+Who created Linux? :->: Linus Torvalds
+Congratulations! You've completed the quiz! 🎉
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ Technical Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Framework**: React 19 + Vite
+- **State Management**: React Hooks
+- **Routing**: React Router 7
+- **Styling**: CSS Modules + Custom Properties
+- **Hosting**: GitHub Pages
+- **CI/CD**: GitHub Actions
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📄 License
 
-## Learn More
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ⚠️ Important Notes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- All quiz content remains property of the original GitHub repository owners
+- Maximum recommended file size: 50KB
+- Supports UTF-8 encoded text files only
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Crafted with ❤️ by Giuseppe Bondi**  
+[Report an Issue](https://github.com/GiuseppeBondii/form/issues) | [View Changelog](CHANGELOG.md)
+```
