@@ -84,4 +84,3 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 **Crafted with ❤️ by Giuseppe Bondi**  
 [Report an Issue](https://github.com/GiuseppeBondii/form/issues) | [View Changelog](CHANGELOG.md)
-```
