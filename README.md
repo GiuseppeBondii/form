@@ -1,5 +1,3 @@
-Ecco il README riscritto in modo strutturato e professionale:
-
 # FormalLogic Quest 🔍🚀
 
 [![MIT License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
