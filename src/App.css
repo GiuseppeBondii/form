@@ -145,8 +145,8 @@ body {
 .quiz-container {
   display: grid;
   place-items: center;
-  min-height: 100vh;
-  padding: var(--spacing-unit);
+  min-height: 60vh;
+  padding: calc(var(--spacing-unit) / 1.2);
   width: 100%;
 }
 
@@ -154,28 +154,38 @@ body {
   max-width: 680px;
   width: 100%;
   text-align: center;
-  padding: calc(var(--spacing-unit) * 1.5);
+  padding: calc(var(--spacing-unit) * 1.2);
   background: var(--surface);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  /* evita che contenuti lunghi spingano fuori lo schermo */
+  max-height: 80vh;
+  overflow: auto;
 }
 
 /* Image containers inside questions/final message */
 .question-images,
 .final-images {
-  display: flex;
+  display: grid;
   gap: 0.75rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  justify-items: center;
+  align-items: start;
   margin: 0.75rem 0 1rem;
+  width: 100%;
+  /* limita l'altezza quando ci sono molte immagini */
+  max-height: 40vh;
+  overflow: auto;
 }
 
 .question-image,
 .final-image {
   max-width: 100%;
-  width: 280px;
-  height: auto;
+  width: 100%;
+  height: 160px;
   border-radius: 12px;
   border: 1px solid var(--border);
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
@@ -196,6 +206,20 @@ form {
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
+}
+
+/* testi lunghi devono andare a capo e rispettare la larghezza della card */
+.question-card h2,
+.final-message p {
+  word-break: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+
+/* assicura che il form rimanga visibile su schermi stretti */
+.question-card form {
+  margin-top: auto;
 }
 
 input[type="text"] {
