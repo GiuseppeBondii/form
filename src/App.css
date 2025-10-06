@@ -160,6 +160,35 @@ body {
   box-shadow: var(--shadow);
 }
 
+/* Image containers inside questions/final message */
+.question-images,
+.final-images {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0.75rem 0 1rem;
+}
+
+.question-image,
+.final-image {
+  max-width: 100%;
+  width: 280px;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  object-fit: cover;
+}
+
+.final-message {
+  display: grid;
+  place-items: center;
+  min-height: 60vh;
+  padding: var(--spacing-unit);
+}
+
 /* Form */
 form {
   display: grid;

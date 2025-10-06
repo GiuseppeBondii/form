@@ -70,6 +70,7 @@ function App() {
 
               <footer className="app-footer">
                 <p>🔒 All data remains on GitHub's servers - No tracking or data collection</p>
+                <p>Developed by Giuseppe Bondi</p>                
               </footer>
             </div>
           } 
