@@ -30,13 +30,23 @@ function QuizForm() {
           const extractImages = (raw) => {
             const images = [];
             if (!raw) return { text: raw, images };
-            // supporta img:"url" oppure :img: "url" con spazi variabili
-            const regex = /(?::)?img\s*:\s*\"([^\"]+)\"/gi;
+            // supporta vari formati: img:"url" img:'url' img:url (con o senza leading :)
+            const regex = /(?::)?img\s*:\s*(?:"([^"]+)"|'([^']+)'|([^\s]+))/gi;
             let match;
             let cleaned = raw;
             while ((match = regex.exec(raw)) !== null) {
-              const url = match[1].trim();
-              if (/^https?:\/\//i.test(url)) images.push(url);
+              const url = (match[1] || match[2] || match[3] || '').trim();
+              // Converti GitHub blob URL in raw.githubusercontent.com
+              const blobMatch = url.match(/^https?:\/\/github\.com\/([^\/]+)\/([^\/]+)\/blob\/([^\/]+)\/(.+)$/i);
+              let finalUrl = url;
+              if (blobMatch) {
+                const owner = blobMatch[1];
+                const repo = blobMatch[2];
+                const branch = blobMatch[3];
+                const path = blobMatch[4];
+                finalUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${path}`;
+              }
+              if (/^https?:\/\//i.test(finalUrl)) images.push(finalUrl);
               cleaned = cleaned.replace(match[0], '').trim();
             }
             return { text: cleaned, images };
@@ -51,23 +61,23 @@ function QuizForm() {
         const extractImages = (raw) => {
           const images = [];
           if (!raw) return { text: raw, images };
-          const regex = /(?::)?img\s*:\s*\"([^\"]+)\"/gi;
+          const regex = /(?::)?img\s*:\s*(?:"([^"]+)"|'([^']+)'|([^\s]+))/gi;
           let match;
           let cleaned = raw;
           while ((match = regex.exec(raw)) !== null) {
-            let url = match[1].trim();
+            const url = (match[1] || match[2] || match[3] || '').trim();
             // Converti GitHub blob URL in raw.githubusercontent.com
-            // es: https://github.com/owner/repo/blob/branch/path -> https://raw.githubusercontent.com/owner/repo/branch/path
             const blobMatch = url.match(/^https?:\/\/github\.com\/([^\/]+)\/([^\/]+)\/blob\/([^\/]+)\/(.+)$/i);
+            let finalUrl = url;
             if (blobMatch) {
               const owner = blobMatch[1];
               const repo = blobMatch[2];
               const branch = blobMatch[3];
               const path = blobMatch[4];
-              url = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${path}`;
+              finalUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${path}`;
             }
 
-            if (/^https?:\/\//i.test(url)) images.push(url);
+            if (/^https?:\/\//i.test(finalUrl)) images.push(finalUrl);
             cleaned = cleaned.replace(match[0], '').trim();
           }
           return { text: cleaned, images };
