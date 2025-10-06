@@ -55,7 +55,18 @@ function QuizForm() {
           let match;
           let cleaned = raw;
           while ((match = regex.exec(raw)) !== null) {
-            const url = match[1].trim();
+            let url = match[1].trim();
+            // Converti GitHub blob URL in raw.githubusercontent.com
+            // es: https://github.com/owner/repo/blob/branch/path -> https://raw.githubusercontent.com/owner/repo/branch/path
+            const blobMatch = url.match(/^https?:\/\/github\.com\/([^\/]+)\/([^\/]+)\/blob\/([^\/]+)\/(.+)$/i);
+            if (blobMatch) {
+              const owner = blobMatch[1];
+              const repo = blobMatch[2];
+              const branch = blobMatch[3];
+              const path = blobMatch[4];
+              url = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${path}`;
+            }
+
             if (/^https?:\/\//i.test(url)) images.push(url);
             cleaned = cleaned.replace(match[0], '').trim();
           }

@@ -1,0 +1,8 @@
+img:https://raw.githubusercontent.com/GiuseppeBondii/form/main/src/img/image-1.jpg
+img:https://raw.githubusercontent.com/GiuseppeBondii/form/main/src/img/image-2.jpg
+img:https://raw.githubusercontent.com/GiuseppeBondii/form/main/src/img/image-3.jpg
+img:https://raw.githubusercontent.com/GiuseppeBondii/form/main/src/img/image-10.jpg
+Qual è la radice quadrata di 64? :->: 8
+Quanti continenti ci sono? :->: 7
+Chi ha dipinto la Gioconda? :->: Leonardo da Vinci
+Complimenti! Hai completato tutte le domande!
